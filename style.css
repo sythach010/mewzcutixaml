@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+}
+
+/* Logo góc trái trên */
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.logo img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+/* Bìa cho điện thoại */
+.cover {
+    width: 100%;
+    height: 220px;
+    background-image: url("cover.png");
+    background-repeat: repeat;
+    background-size: 120px;
+}
+
+/* Nội dung */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+hr {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid #000;
+}
+
+.info p {
+    font-size: 14px;
+    margin: 8px 0;
+    word-break: break-word;
+}
+
+.info a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Chỉ chỉnh cho màn hình lớn (PC) */
+@media (min-width: 768px) {
+    .cover {
+        height: 300px;
+        background-size: 150px;
+    }
+
+    .text {
+        font-size: 22px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+}
