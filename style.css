@@ -5,15 +5,24 @@
     font-family: Arial, sans-serif;
 }
 
-body {
-    background: #fff;
+html, body {
+    height: 100%;
 }
 
-/* Logo góc trái trên */
+/* Nền bìa bao phủ toàn bộ web */
+body {
+    background-image: url("cover.png");
+    background-size: cover;       /* bao phủ toàn bộ */
+    background-position: center;  /* căn giữa */
+    background-repeat: no-repeat; /* không lặp */
+    background-attachment: fixed;
+}
+
+/* Logo */
 .logo {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 12px;
     z-index: 10;
 }
 
@@ -22,50 +31,42 @@ body {
     border-radius: 50%;
 }
 
-/* Bìa cho điện thoại */
-.cover {
-    width: 100%;
-    height: 220px;
-    background-image: url("cover.png");
-    background-repeat: repeat;
-    background-size: 120px;
-}
-
 /* Nội dung */
 .content {
-    padding: 20px;
+    min-height: 100vh;
+    padding: 120px 20px 40px;
     text-align: center;
+    color: #fff;
+    backdrop-filter: blur(4px);
 }
 
+/* Text chính */
 .text {
     font-size: 18px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
+/* Gạch ngang */
 hr {
-    width: 90%;
+    width: 85%;
     margin: 20px auto;
-    border: 1px solid #000;
+    border: 1px solid rgba(255,255,255,0.7);
 }
 
+/* Thông tin */
 .info p {
     font-size: 14px;
-    margin: 8px 0;
+    margin: 10px 0;
     word-break: break-word;
 }
 
 .info a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
-/* Chỉ chỉnh cho màn hình lớn (PC) */
+/* Màn hình lớn hơn */
 @media (min-width: 768px) {
-    .cover {
-        height: 300px;
-        background-size: 150px;
-    }
-
     .text {
         font-size: 22px;
     }
