@@ -9,13 +9,14 @@ html, body {
     height: 100%;
 }
 
-/* Nền bìa bao phủ toàn bộ web */
+/* Nền ảnh KHÔNG mờ */
 body {
     background-image: url("cover.png");
-    background-size: cover;       /* bao phủ toàn bộ */
-    background-position: center;  /* căn giữa */
-    background-repeat: no-repeat; /* không lặp */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    color: #fff;
 }
 
 /* Logo */
@@ -36,21 +37,21 @@ body {
     min-height: 100vh;
     padding: 120px 20px 40px;
     text-align: center;
-    color: #fff;
-    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.45); /* nền tối nhẹ để chữ nổi */
 }
 
 /* Text chính */
 .text {
     font-size: 18px;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 /* Gạch ngang */
 hr {
     width: 85%;
     margin: 20px auto;
-    border: 1px solid rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.8);
 }
 
 /* Thông tin */
@@ -61,8 +62,8 @@ hr {
 }
 
 .info a {
-    color: #fff;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 /* Màn hình lớn hơn */
@@ -74,4 +75,4 @@ hr {
     .info p {
         font-size: 16px;
     }
-}
+    }
