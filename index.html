@@ -3,35 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewzcutixaml</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mewz Cuti</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: url("cover.png"); /* 👈 đổi đúng tên ảnh */
+            background-repeat: repeat;        /* nền cute lặp */
+            background-size: 180px;            /* chỉnh độ to nhỏ icon */
+            color: #000;
+        }
+
+        /* LOGO */
+        .logo {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 10;
+        }
+
+        .logo img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        /* KHỐI GIỮA */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .box {
+            background: rgba(255,255,255,0.85); /* giúp chữ rõ */
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 90%;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #000;
+            margin: 12px 0;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 6px 0;
+            word-break: break-word;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- Logo góc trái -->
+    <!-- LOGO -->
     <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="logo.png">
     </div>
 
-    <!-- Khối chữ -->
-    <div class="center-box">
-        <p class="text">Cậu ơi cậu vào đây làm gì thế...</p>
+    <!-- NỘI DUNG GIỮA -->
+    <div class="container">
+        <div class="box">
+            <h1>Cậu ơi cậu vào đây làm gì thế...</h1>
 
-        <hr>
+            <hr>
 
-        <div class="info">
             <p>https://mewzcutixaml</p>
-            <p>Zaplao: 0896106952</p>
+            <p>Zalo: 0896106952</p>
             <p>
                 FB:
-                <a href="https://www.facebook.com/share/1Mzw5FZE71/" target="_blank">
-                    https://www.facebook.com/share/1Mzw5FZE71/
+                <a href="https://www.facebook.com/share/1Mzw5FZE71">
+                    facebook.com
                 </a>
             </p>
             <p>Email: sythach78@gmail.com</p>
+
             <p>!!!</p>
         </div>
     </div>
 
 </body>
-</html>
+                    </html>
