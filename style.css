@@ -13,7 +13,7 @@ html, body {
 /* NỀN – KHÔNG LẶP – PHỦ TOÀN MÀN HÌNH */
 body {
     background-image: url("cover.png");
-    background-repeat: no-repeat !important;
+    background-repeat: 1 !important;
     background-size: cover !important;
     background-position: center center !important;
     background-attachment: fixed;
