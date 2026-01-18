@@ -25,16 +25,15 @@ body {
     border-radius: 50%;
 }
 
-/* Khối chữ căn giữa tuyệt đối */
-.center-box {
+/* Nội dung chiếm toàn bộ màn hình */
+.container {
     min-height: 100vh;
+    padding: 80px 20px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;      /* căn giữa ngang */
-    justify-content: center;  /* căn giữa dọc */
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-}
 
 /* Dòng chữ chính */
 .text {
