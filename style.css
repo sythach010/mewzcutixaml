@@ -5,18 +5,20 @@
     font-family: Arial, sans-serif;
 }
 
-/* Nền trắng full web */
+/* GIỮ NGUYÊN NỀN (ảnh đang dùng trước đó) */
 body {
-    background: #ffffff;
-    color: #000000;
     min-height: 100vh;
+    background-image: url("cover.png");
+    background-repeat: repeat;
+    background-size: 150px;
+    color: #000;
 }
 
-/* Logo góc trái trên */
+/* Logo */
 .logo {
     position: fixed;
-    top: 12px;
-    left: 12px;
+    top: 10px;
+    left: 10px;
     z-index: 10;
 }
 
@@ -25,18 +27,18 @@ body {
     border-radius: 50%;
 }
 
-/* Nội dung chiếm toàn bộ màn hình */
-.container {
+/* Khối chữ căn giữa tuyệt đối */
+.center-box {
     min-height: 100vh;
-    padding: 80px 20px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center;      /* căn giữa ngang */
+    justify-content: center;  /* căn giữa dọc */
     text-align: center;
+    padding: 20px;
 }
 
-/* Chữ chính */
+/* Dòng chữ chính */
 .text {
     font-size: 18px;
     margin-bottom: 20px;
@@ -45,6 +47,7 @@ body {
 /* Gạch ngang */
 hr {
     width: 90%;
+    max-width: 400px;
     border: 1px solid #000;
     margin: 20px 0;
 }
