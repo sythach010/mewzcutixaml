@@ -5,19 +5,14 @@
     font-family: Arial, sans-serif;
 }
 
-html, body {
-    height: 100%;
-}
-
-/* Nền web – KHÔNG mờ */
+/* Nền trắng full web */
 body {
-    background-image: url("cover.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #ffffff;
+    color: #000000;
+    min-height: 100vh;
 }
 
-/* Logo */
+/* Logo góc trái trên */
 .logo {
     position: fixed;
     top: 12px;
@@ -30,48 +25,38 @@ body {
     border-radius: 50%;
 }
 
-/* Khung nội dung trắng để đọc rõ */
-.content {
+/* Nội dung chiếm toàn bộ màn hình */
+.container {
     min-height: 100vh;
-    padding: 120px 20px 40px;
+    padding: 80px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background: rgba(255, 255, 255, 0.85);
 }
 
-/* Text chính */
+/* Chữ chính */
 .text {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #000;
 }
 
 /* Gạch ngang */
 hr {
-    width: 85%;
-    margin: 20px auto;
+    width: 90%;
     border: 1px solid #000;
+    margin: 20px 0;
 }
 
 /* Thông tin */
 .info p {
     font-size: 14px;
-    margin: 10px 0;
-    color: #000;
+    margin: 8px 0;
     word-break: break-word;
 }
 
 .info a {
     color: #000;
     text-decoration: none;
-}
-
-/* Màn hình lớn */
-@media (min-width: 768px) {
-    .text {
-        font-size: 22px;
-    }
-
-    .info p {
-        font-size: 16px;
-    }
 }
