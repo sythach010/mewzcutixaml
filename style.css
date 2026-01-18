@@ -9,14 +9,12 @@ html, body {
     height: 100%;
 }
 
-/* Nền ảnh KHÔNG mờ */
+/* Nền web – KHÔNG mờ */
 body {
     background-image: url("cover.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #fff;
 }
 
 /* Logo */
@@ -32,41 +30,42 @@ body {
     border-radius: 50%;
 }
 
-/* Nội dung */
+/* Khung nội dung trắng để đọc rõ */
 .content {
     min-height: 100vh;
     padding: 120px 20px 40px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.45); /* nền tối nhẹ để chữ nổi */
+    background: rgba(255, 255, 255, 0.85);
 }
 
 /* Text chính */
 .text {
     font-size: 18px;
     margin-bottom: 20px;
-    font-weight: 500;
+    color: #000;
 }
 
 /* Gạch ngang */
 hr {
     width: 85%;
     margin: 20px auto;
-    border: 1px solid rgba(255,255,255,0.8);
+    border: 1px solid #000;
 }
 
 /* Thông tin */
 .info p {
     font-size: 14px;
     margin: 10px 0;
+    color: #000;
     word-break: break-word;
 }
 
 .info a {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #000;
+    text-decoration: none;
 }
 
-/* Màn hình lớn hơn */
+/* Màn hình lớn */
 @media (min-width: 768px) {
     .text {
         font-size: 22px;
