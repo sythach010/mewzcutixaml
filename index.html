@@ -1,109 +1,153 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mewz Cuti</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mewz Cuti</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            min-height: 100vh;
-            background-image: url("cover.png"); /* 👈 đổi đúng tên ảnh */
-            background-repeat: repeat;        /* nền cute lặp */
-            background-size: 180px;            /* chỉnh độ to nhỏ icon */
-            color: #000;
-        }
+/* NỀN */
+body{
+    min-height:100vh;
+    background-image: url("nen.png");
+    background-repeat: repeat;
+    background-size: 180px;
+    color:#000;
+}
 
-        /* LOGO */
-        .logo {
-            position: fixed;
-            top: 12px;
-            left: 12px;
-            z-index: 10;
-        }
+/* LOGO */
+.logo{
+    position: fixed;
+    top:12px;
+    left:12px;
+    z-index:10;
+}
+.logo img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+}
 
-        .logo img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-        }
+/* KHỐI GIỮA */
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-        /* KHỐI GIỮA */
-        .container {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
+.box{
+    background: rgba(255,255,255,0.85);
+    padding:22px;
+    border-radius:14px;
+    max-width:90%;
+}
 
-        .box {
-            background: rgba(255,255,255,0.85); /* giúp chữ rõ */
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 90%;
-        }
+/* TEXT */
+h1{font-size:20px;margin-bottom:12px;}
+p{font-size:14px;margin:6px 0;word-break: break-word;}
+hr{border:none;height:1px;background:#000;margin:12px 0;}
+a{color:#000;text-decoration:none;}
 
-        h1 {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
+/* LOGIN */
+.login-box{
+    background: rgba(255,255,255,0.9);
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+}
 
-        hr {
-            border: none;
-            height: 1px;
-            background: #000;
-            margin: 12px 0;
-        }
+.login-box h2{
+    margin-bottom:10px;
+}
 
-        p {
-            font-size: 14px;
-            margin: 6px 0;
-            word-break: break-word;
-        }
+.login-box input{
+    padding:10px;
+    width:200px;
+    border-radius:8px;
+    border:1px solid #aaa;
+    outline:none;
+    text-align:center;
+    margin-top:8px;
+}
 
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-    </style>
+.login-box button{
+    margin-top:10px;
+    padding:8px 18px;
+    border:none;
+    border-radius:8px;
+    background:#000;
+    color:#fff;
+    cursor:pointer;
+}
+
+.error{
+    color:red;
+    font-size:13px;
+    margin-top:6px;
+}
+
+/* ẨN NỘI DUNG */
+#mainContent{display:none;}
+</style>
 </head>
 
 <body>
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img src="logo.png">
+<!-- LOGO -->
+<div class="logo">
+    <img src="logo.png">
+</div>
+
+<!-- LOGIN -->
+<div class="container" id="loginBox">
+    <div class="login-box">
+        <h2>🔐 Nhập mật khẩu</h2>
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <br>
+        <button onclick="checkPassword()">Vào web</button>
+        <div class="error" id="error"></div>
     </div>
+</div>
 
-    <!-- NỘI DUNG GIỮA -->
-    <div class="container">
-        <div class="box">
-            <h1>Hilo Lâu Rùi Khum Gặp Anh Có Nhớ Em Không,,,>.<,,,</h1>
-
-            <hr>
-
-            <p>https://mewzcutixaml</p>
-            <p>Zaplao: 0896106952</p>
-            <p>
-                FB:
-                <a href="https://www.facebook.com/share/1Mzw5FZE71">
-                    facebook.com/share/1L9Af9o13w/
-                </a>
-            </p>
-            <p>Email: sythach78@gmail.com</p>
-
-            <p>!!!</p>
-        </div>
+<!-- NỘI DUNG WEB -->
+<div class="container" id="mainContent">
+    <div class="box">
+        <h1>Cậu ơi cậu vào đây làm gì thế...</h1>
+        <hr>
+        <p>https://mewzcutixaml</p>
+        <p>Zalo: 0896106952</p>
+        <p>
+            FB:
+            <a href="https://www.facebook.com/share/1Mzw5FZE71">facebook.com</a>
+        </p>
+        <p>Email: sythach78@gmail.com</p>
+        <p>!!!</p>
     </div>
+</div>
+
+<script>
+const PASSWORD = "03062010"; // 🔑 đổi mật khẩu tại đây
+
+function checkPassword(){
+    const input = document.getElementById("password").value;
+    if(input === PASSWORD){
+        document.getElementById("loginBox").style.display="none";
+        document.getElementById("mainContent").style.display="flex";
+    }else{
+        document.getElementById("error").innerText="Sai mật khẩu!";
+    }
+}
+</script>
 
 </body>
-                    </html>
+    </html>
