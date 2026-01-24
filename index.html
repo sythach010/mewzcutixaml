@@ -140,18 +140,21 @@ a{color:#000;text-decoration:none;}
 </div>
 
 <script>
-const PASSWORD = "03062010"; // 🔑 đổi mật khẩu tại đây
+const PASSWORD = "03062010"; // đổi mật khẩu tại đây
 
 function checkPassword(){
     const input = document.getElementById("password").value;
+    const error = document.getElementById("error");
+
     if(input === PASSWORD){
-        document.getElementById("loginBox").style.display="none";
-        document.getElementById("mainContent").style.display="flex";
-    }else{
-        document.getElementById("error").innerText="Sai mật khẩu!";
+        error.innerText = "";
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("mainContent").style.display = "flex";
+    } else {
+        error.innerText = "Sai mật khẩu";
     }
 }
-</script>
+            </script>
 
 </body>
     </html>
